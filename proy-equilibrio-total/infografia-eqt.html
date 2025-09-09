@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Marketing Q4 2025 - Equilibrio Total</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F8FF;
+        }
+        
+                .logo-eqt {
+            display: block;
+            margin: 0 auto;
+            height: 100px;
+        }
+
+        
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .download-btn {
+            background-color: #004AAD;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .download-btn:hover {
+            background-color: #0085FF;
+        }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 40vh;
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+        }
+        .timeline-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        .timeline-line {
+            width: 100%;
+            height: 4px;
+            background-color: #87CEEB;
+            position: absolute;
+            top: 2rem; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .timeline-dot {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: #004AAD;
+            border: 4px solid #F0F8FF;
+            border-radius: 9999px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .timeline-content {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            text-align: center;
+            width: 90%;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-[#004AAD] text-white text-center p-8 shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Plan de Marketing Digital Q4 2025</h1>
+        <h2 class="text-2xl md:text-3xl font-semibold text-[#87CEEB]"><img class="logo-eqt" src="/images/Eq-total.jpg">Sucursal Ecatepec</h2>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="overview" class="mb-12">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-bold text-[#004AAD] mb-2">Objetivos Principales del Trimestre</h3>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Nuestra estrategia se enfocará en posicionar a Equilibrio Total como la clínica de fisioterapia líder en Ecatepec, atrayendo nuevos pacientes y fortaleciendo la marca.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-6xl font-black text-[#0085FF]">200</div>
+                    <div class="text-2xl font-bold mt-2">Leads Cualificados</div>
+                    <p class="text-gray-500 mt-1">Nuevos pacientes potenciales para la clínica.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-6xl font-black text-[#0085FF]">150,000</div>
+                    <div class="text-2xl font-bold mt-2">Usuarios Únicos Alcanzados</div>
+                    <p class="text-gray-500 mt-1">Fortalecimiento de la presencia de marca en la zona.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="budget" class="mb-12 bg-white p-6 md:p-8 rounded-xl shadow-lg">
+            <h3 class="text-3xl font-bold text-[#004AAD] text-center mb-6">Presupuesto y Distribución de Canales</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-center md:text-left">
+                    <p class="text-2xl font-bold mb-4">Inversión Total Mensual:</p>
+                    <p class="text-5xl font-black text-[#0085FF] mb-6">$20,000 MXN</p>
+                    <p class="text-gray-600 leading-relaxed">El presupuesto se distribuye estratégicamente para maximizar la captura de usuarios con alta intención (Google Ads) y generar nueva demanda en plataformas sociales (Meta Ads).</p>
+                </div>
+                <div>
+                    <div class="chart-container">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kpis" class="mb-12">
+            <h3 class="text-3xl font-bold text-[#004AAD] text-center mb-8">Indicadores Clave de Éxito (KPIs)</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="kpi-card">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <div class="text-2xl font-bold">Costo por Lead (CPL)</div>
+                    <div class="text-4xl font-black text-[#0085FF] mt-2">$100 MXN</div>
+                    <p class="text-gray-500 mt-1">Máximo por cada nuevo prospecto.</p>
+                </div>
+                <div class="kpi-card">
+                    <div class="text-4xl mb-4">🖱️</div>
+                    <div class="text-2xl font-bold">Tasa de Clics (CTR)</div>
+                    <div class="text-3xl font-black text-[#0085FF] mt-2">>2% <span class="text-xl font-semibold text-gray-500">(Google)</span></div>
+                    <div class="text-3xl font-black text-[#0085FF] mt-1">>1.5% <span class="text-xl font-semibold text-gray-500">(Meta)</span></div>
+                </div>
+                <div class="kpi-card">
+                    <div class="text-4xl mb-4">✅</div>
+                    <div class="text-2xl font-bold">Tasa de Conversión (CVR)</div>
+                    <div class="text-4xl font-black text-[#0085FF] mt-2">>5%</div>
+                    <p class="text-gray-500 mt-1">En nuestra página de destino.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="strategy" class="mb-12">
+            <h3 class="text-3xl font-bold text-[#004AAD] text-center mb-8">Estrategia por Canal</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#0085FF]">
+                    <h4 class="text-2xl font-bold mb-4">Google Ads: Captura de Demanda</h4>
+                    <p class="text-gray-600 mb-4">Nos dirigimos a usuarios que ya están buscando activamente servicios de fisioterapia, capturando así leads con alta probabilidad de conversión.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold">Campañas de Búsqueda:</span> Para palabras clave como "fisioterapia ecatepec".</li>
+                        <li><span class="font-semibold">Campañas de Display:</span> Remarketing para re-impactar a visitantes del sitio web.</li>
+                        <li><span class="font-semibold">Enfoque:</span> Leads altamente cualificados y conversiones directas.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#87CEEB]">
+                    <h4 class="text-2xl font-bold mb-4">Meta Ads: Generación de Demanda</h4>
+                    <p class="text-gray-600 mb-4">Creamos interés en personas que pueden necesitar nuestros servicios pero no están buscando, educando sobre los beneficios de la fisioterapia.</p>
+                     <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold">Formularios de Leads:</span> Para captar datos de contacto sin salir de la app.</li>
+                        <li><span class="font-semibold">Campañas de Tráfico:</span> Dirigir a una landing page optimizada.</li>
+                         <li><span class="font-semibold">Audiencias:</span> Basadas en intereses (deportes, salud) y Lookalikes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="mb-12">
+             <h3 class="text-3xl font-bold text-[#004AAD] text-center mb-12">Hoja de Ruta Trimestral</h3>
+            <div class="relative flex flex-col md:flex-row justify-between items-start">
+                <div class="timeline-line hidden md:block"></div>
+                
+                <div class="timeline-item mb-8 md:mb-0">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-content">
+                        <h4 class="font-bold text-xl text-[#004AAD]">Octubre</h4>
+                        <p class="font-semibold text-lg text-gray-600">Activación y Prueba</p>
+                        <p class="text-sm mt-2 text-gray-500">Lanzamiento de campañas iniciales. Recopilación de datos y realización de pruebas A/B en anuncios y audiencias.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item mb-8 md:mb-0">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content">
+                        <h4 class="font-bold text-xl text-[#004AAD]">Noviembre</h4>
+                        <p class="font-semibold text-lg text-gray-600">Optimización y Escala</p>
+                        <p class="text-sm mt-2 text-gray-500">Análisis de resultados. Pausar lo que no funciona e invertir más presupuesto en las campañas y anuncios ganadores.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-content">
+                        <h4 class="font-bold text-xl text-[#004AAD]">Diciembre</h4>
+                        <p class="font-semibold text-lg text-gray-600">Cierre y Oportunidad</p>
+                        <p class="text-sm mt-2 text-gray-500">Maximizar conversiones con ofertas de fin de año. Preparar informe final y planificar el próximo trimestre.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-12">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-bold text-[#004AAD] mb-2">Descargas</h3>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Documentos importantes 😊</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-2xl font-bold mt-2">Plan de MKT Q4 2025</div>
+                    <p class="text-gray-500 mt-1">Previsualiza o descarga el documento</p>
+                    <div class="btn-container"><a href="https://docs.google.com/document/d/1YNed6I5HsJmsEFGZrV0Lipk1pRbJcuL7P2ept2Pzvhs/edit?usp=sharing" class="download-btn" >Descargar Plan de MKT (DOCX)</a></div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-2xl font-bold mt-2">Ejercicios de Trafficker</div>
+                    <p class="text-gray-500 mt-1">Previsualiza o descarga el documento</p>
+                    <div class="btn-container"><a href="https://docs.google.com/document/d/1_zemDI1f5u5tezRfREp7C2jdyoli09aRBlfHAYXo6t8/edit?usp=sharing" class="download-btn" >Descargar el Ejercicio (DOCX)</a></div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="bg-[#004AAD] text-white text-center p-4 mt-8">
+        <p>&copy; 2025 Equilibrio Total. Plan Estratégico de Marketing Digital.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapLabel = (str, maxWidth) => {
+                if (str.length <= maxWidth) {
+                    return str;
+                }
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = words[0];
+                for (let i = 1; i < words.length; i++) {
+                    if ((currentLine + ' ' + words[i]).length > maxWidth) {
+                        lines.push(currentLine);
+                        currentLine = words[i];
+                    } else {
+                        currentLine += ' ' + words[i];
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            };
+
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        position: 'top',
+                    },
+                }
+            };
+            
+            const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+            new Chart(budgetCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Google Ads', 'Meta Ads'],
+                    datasets: [{
+                        label: 'Distribución de Presupuesto',
+                        data: [12000, 8000],
+                        backgroundColor: [
+                            '#004AAD',
+                            '#0085FF'
+                        ],
+                        borderColor: [
+                            '#F0F8FF',
+                            '#F0F8FF'
+                        ],
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    ...tooltipTitleCallback
+                }
+            });
+        });
+    </script>
+</body>
+</html>
